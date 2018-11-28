@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if movies|length == 0 %}
+    <p>No movies yet</p>
+
+    {% else %}
+        {% for movie in movies %}
+        <div class="movie-unit">
+        <h2 class="movie-title"><a href='/movies?title={{movie.title}}'>{{movie.title}}</a></h2>
+        </div>
+        {% endfor %}
+    
+    {% endif %}
+
+    <h2><a href='/add'>Add another movie to the list</a></h2>
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Search for a movie</h1>
+    <div class="form">
+    <form action="/search" method="post">
+
+        <div class="inner-wrap">
+
+        <span class="error">{{empty_error}}</span>
+
+        <p>
+            <label>movie title
+            <input name="title" type="text" value="{{title}}">
+            </label>
+        </p>
+
+        <p>
+            <label>release year   
+            <input name="release_year" type="text" value="{{release_year}}">
+            </label>
+        </p>
+    
+        <p>
+            <label>origin   
+            <input name="origin" type="text" value="{{origin}}">
+            </label>
+        </p>
+        
+        <p>
+            <label>director   
+            <input name="director" type="text" value="{{director}}">
+            </label>
+        </p>
+             
+        <p>
+            <label>genre   
+            <input name="genre" type="text" value="{{genre}}">
+            </label>
+        </p>
+        </div>
+        <div class="submit">  
+        <input type='submit' value="Search database">
+        </div>
+    
+    </form>
+
+    <span class="error">{{except_error}}</span>
+
+    </div>
+    
+{% endblock %}

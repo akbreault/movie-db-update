@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Edit {{movie.title}}</h1>
+
+<div class="form">
+
+<span class="error">{{empty_error}}</span>
+
+    <form action="/edit?title={{movie.title}}" method="post">
+        <div class="inner-wrap">
+        <p>
+            <label>movie title
+            <input name="title" type="text" value="{{title}}">
+            </label>
+        </p>
+
+        <p>
+            <label>release year   
+            <input name="release_year" type="text" value="{{release_year}}">
+            </label>
+        </p>
+
+        <p>
+            <label>origin   
+            <input name="origin" type="text" value="{{origin}}">
+            </label>
+        </p>
+    
+        <p>
+            <label>director   
+            <input name="director" type="text" value="{{director}}">
+            </label>
+        </p>
+        
+        <p>
+            <label>cast  
+            <input name="cast" type="text" value="{{cast}}">
+            </label>
+        </p>
+            
+        <p>
+            <label>genre   
+            <input name="genre" type="text" value="{{genre}}">
+            </label>
+        </p>
+        
+        <p>
+            <label>wiki   
+            <input name="wiki" type="text" value="{{wiki}}">
+            </label>
+        </p>
+    
+        
+        <p>
+            <label>plot   
+            <input name="plot" type="text" value="{{plot}}">
+            <!--TODO: update to textarea and catch exception if empty-->  
+            </label>
+        </p>
+        </div>
+        <div class='submit'>
+        <input type='submit' value="Edit movie details">
+        </div>
+ 
+    </form>
+    </div>
+
+{% endblock %}

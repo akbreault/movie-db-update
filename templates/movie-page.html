@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h1>{{title}}</h1>
+<hr>
+<div class="inner-wrap">
+<h2>Released: {{release_year}} </h2>
+<br />
+<h2>Directed by: {{director}}</h2>
+<br />
+<h2>Originating from: {{origin}}</h2>
+<br />
+<h2>Featuring: {{cast}}</h2>
+<br />
+<h2>Genre: {{genre}}</h2>
+<br />
+<h2>Wiki Link: {{wiki}}</h2>
+<br />
+<h2>Movie Synopsis: {{plot}}</h2>
+<br />
+<h2><a href='/edit?title={{movie.title}}'>Is something incorrect? Edit me!</a></h2>
+<h2><a href='/delete?title={{movie.title}}'>Do you despise this movie? Delete me!</a></h2>
+</div>
+
+{% endblock %}

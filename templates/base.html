@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{page_title}}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+        <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+        <style>
+            .error{
+                color: red;
+                font-family: Bitter; 
+                font-style: italic;
+            }
+        
+            body{
+                font-family: Bitter;
+                text-align: center;
+                background-color:aliceblue;
+            }
+        
+            .main-heading{
+                background: #2A88AD;
+                color: white;
+                border-radius: 10px;
+                padding: 50px;
+                margin: 5px 0px 15px 0px;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+                font: normal 60px 'Bitter', serif;
+                text-align: left;
+            }
+        
+            .movie-unit{
+                background: #f0f0f0;
+                margin: 20px 0px;
+                padding: 15px;
+                border-radius: 10px;
+            }
+        
+            .links{
+                text-align: right;
+                display: block;
+                margin: -55px 10px;
+                position: relative;
+                top: 85px;
+            }
+        
+            .links a {
+                color:#f0f0f0;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        
+            .movie-title a {
+                color: black;
+                text-decoration: none;             
+            }
+        
+            .movie-title a:hover {
+                color: black;
+                text-decoration: underline;          
+            }
+        
+                </style>
+            
+            </head>
+
+
+    <body>
+        <span class="links">
+            <a href='/'>Home</a>
+            <br />
+            <a href='/movies'>Movie Listing</a>
+            <br />
+            <a href='/search'>Search the database</a>
+            <br />
+            <a href='/add'>Add a movie</a>
+            <br />
+        </span>
+                    
+        <h1 class="main-heading">the Intranet Movie Database</h1>
+
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>

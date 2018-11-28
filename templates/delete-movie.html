@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="form">
+<form action="/delete?title={{movie.title}}" method="post">
+    <div class="submit">
+    <input type='submit' value="Delete this movie!">
+    </div>
+</form>
+</div>
+
+<h1><a href='/movies?title={{movie.title}}'>No - I regret it! Take me back!</a></h1>
+
+{% endblock %}
